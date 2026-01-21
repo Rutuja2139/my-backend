@@ -1,6 +1,6 @@
 # Excel Data Analytics Backend
 
-This repository contains the **backend code** for an Excel Data Analytics web application developed during my internship and academic project.
+This repository contains the **backend code** for an Excel Data Analytics web application developed during my internship  project.
 
 The backend handles user authentication, Excel file uploads, parsing and processing data, and providing APIs for the frontend to generate charts and visualizations.
 
