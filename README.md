@@ -35,7 +35,7 @@ This project demonstrates my skills in **backend development, REST API design, d
 
 1. Clone the repository:
 ```bash
-1.git clone https://github.com/Rutuja2139/my-backend.git
+git clone https://github.com/Rutuja2139/my-backend.git
 
 2.Install dependencies:
 npm install
