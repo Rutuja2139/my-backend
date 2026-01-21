@@ -31,18 +31,6 @@ This project demonstrates my skills in **backend development, REST API design, d
 
 
 
-# Project Structure
-
-controllers/
-middlewares/
-models/
-routes/
-utils/
-server.js
-
-
-
-
 # Running Locally
 
 1. Clone the repository:
