@@ -1,8 +1,7 @@
 import * as XLSX from 'xlsx';
 import File from '../models/fileModel.js';
 import User from '../models/userModel.js';
-// import cloudinary from '../utils/cloudinaryConfig.js';
-// import { PassThrough } from 'stream';
+
 
 const dashboardgetController = async (req,res)=>{
     try{
@@ -42,10 +41,9 @@ const dashboardpostController = async(req,res)=>{
     const colArr = Object.keys(columnWiseData)
     const userId = req.userData.userData.user;
     const fileName = req.file.originalname;
-    // console.log(noOfRow);
-    // console.log(noOfColumn)
+  
      console.log(colArr)
-    // console.log(req.userData.userData.user)
+
     
     let answer;
     try{
@@ -69,20 +67,3 @@ const dashboardpostController = async(req,res)=>{
 export {dashboardgetController, dashboardpostController}
 
 
-//     const result = await new Promise((resolve, reject) => {
-    //         const stream = cloudinary.uploader.upload_stream(
-    //                 { resource_type: 'raw', folder: 'excel-uploads', public_id: req.file.originalname.replace(/\.[^/.]+$/, '') },
-    //                 (err, result) => {
-    //                     (err ? reject(err) : resolve(result))
-    //                 }
-    //         );
-            
-    //         const bufferStream = new PassThrough();
-    //         bufferStream.end(req.file.buffer);
-    //         bufferStream.pipe(stream);
-    //     });
-    //     console.log(result);
-
-    // }catch(err){
-    //     console.error(err);
-    // }
