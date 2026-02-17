@@ -31,7 +31,7 @@ const loginController = async(req,res)=>{
 const signupController = async(req,res)=>{
     const data = req.body;
     try{
-    const newUser= await User(data);
+    const newUser= new User(data);
     const responce = await newUser.save();
     const payload = {
         user: responce.id,
