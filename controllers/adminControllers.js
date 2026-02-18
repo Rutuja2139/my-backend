@@ -4,7 +4,7 @@ import Chart from "../models/ChartModel.js";
 
 const adminManagementController = async (req,res)=>{
         try {
-            // Fetch statistics
+            
             const totalUsers = await User.countDocuments();
             const totalUploads = await File.countDocuments();
             const chartUsage = await Chart.countDocuments();
@@ -14,7 +14,7 @@ const adminManagementController = async (req,res)=>{
               totalUsers:totalUsers,
               totalUploads:totalUploads,
               chartUsage:chartUsage,
-              name: user.name
+              name: user?.name
             });
           } catch (err) {
             res.status(500).json({ error: err.message });
@@ -23,6 +23,7 @@ const adminManagementController = async (req,res)=>{
 }
 
 const adminInfoManagement = async(req,res)=>{
+        
     try{
         const allUsers = await User.find()
         res.json(allUsers)
